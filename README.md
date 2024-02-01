@@ -1,1 +1,36 @@
-# developer-resources
+# Developer Resources
+
+**Install Shopify CLI**
+https://shopify.dev/docs/themes/tools/cli/install
+
+**Install VSCode**
+https://code.visualstudio.com/Download
+
+**Install VSCode extensions**
+Shopify Liquid - Shopify
+Trailing Spaces - Shardul Mahadik
+Code Spell Checker - Street Side Software
+Auto Rename Tag - Jun Han
+Auto Complete Tag - Jun Han
+Auto Close Tag - Jun Han
+Git Graph - mhutchie
+
+// optional theme: One Monokai Theme - Joshua Azemoh
+
+**Install Zsh + PowerLevel10k**
+https://dev.to/abdfnx/oh-my-zsh-powerlevel10k-cool-terminal-1no0
+
+**Add ShopifyCLI aliases**
+- Add code to bottom of ~/.zshrc
+- https://github.com/jdunham2/developer-resources/blob/main/shopify-cli-aliases.bash
+
+### How-Tos
+**Using ShopifyCLI with VSCode via aliases**
+Depends on store folder named using structure: [store-name]-shopify
+- Pull themes
+  - stpl
+- Run development environment
+  - std
+- Push themes
+  - stph
+- Save to git repo (see if need help with this)
