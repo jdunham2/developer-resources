@@ -33,3 +33,4 @@ Depends on store folder named using structure: [store-name]-shopify
 - Push themes
   - stph
 - Save to git repo (see if need help with this)
+  - Use Conventional Commit message https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages#conventional-commits
