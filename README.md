@@ -17,6 +17,9 @@ https://code.visualstudio.com/Download
 
 // optional theme: One Monokai Theme - Joshua Azemoh
 
+**Install Brew**
+https://brew.sh/
+
 **Install Zsh + PowerLevel10k**
 https://dev.to/abdfnx/oh-my-zsh-powerlevel10k-cool-terminal-1no0
 
