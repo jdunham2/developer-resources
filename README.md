@@ -37,3 +37,4 @@ Depends on store folder named using structure: [store-name]-shopify
   - stph
 - Save to git repo (see if need help with this)
   - Use Conventional Commit message https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages#conventional-commits
+- [Steps to make theme code changes](https://github.com/jdunham2/developer-resources/blob/main/how-to-shopify-theme-changes.md)
