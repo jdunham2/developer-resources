@@ -35,6 +35,11 @@ git commit -m 'production download'
 Make your code changes in Shopify CLI Development Environment
 `std`
 
+Work off the trunk theme in git
+- live themes are always `master`
+- new site builds that will replace an old site are always on a `new theme` branch
+  - verify the new theme branch name with `git branch`
+
 After your changes are done get the latest Shopify changes again
 ```
 // stash your changes
@@ -48,4 +53,19 @@ git add .
 git commit -m 'production download'
 // get your changes back
 git stash pop
+
+// IMPORTANT - REVIEW every code change in the source control
+
+// push your changes to the trunk theme
+stph
+
+// IMPORTANT - TEST your changes on the trunk theme
+// fix anything if its broken once on trunk theme right away
+
+// push your changes to git
+git add .
+// use conventional commit messages
+git commit -m 'type(scope): description' -m '2nd description for body of commit'
+git push
 ```
+
