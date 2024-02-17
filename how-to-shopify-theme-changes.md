@@ -72,6 +72,8 @@ git push
 ## Process
 Remember when pushing to the live theme -- do not push to the live template until it has been approved, it should be pushed to a new template that is merged after approval. See steps below.
 
+Overview: We want to use a single theme with templates for all changes to the site, coupled with good dev practices of pulling from the trunk theme before pushing any code. The goal of this process is to mediate overriding changes via the code editor.
+
 - **Create a new PLP/PDP/Article/etc template for redesigns.**
   - Once they have been QA'd and approved, merge the new template with the live one.
 - Code should be pushed to the trunk theme before asking for QA.
