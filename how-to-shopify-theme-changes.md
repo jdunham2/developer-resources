@@ -38,7 +38,7 @@ Make your code changes in Shopify CLI Development Environment
 Work off the "trunk" branch/theme
 - Live Shopify themes are always on the `master` branch.
 - New site builds that will replace an old site have their own development theme in Shopify (**MM Development Redesign**)
-  - Use **mm-redesign** branch in github instead of master (see more in the FAQ)
+  - Use **mm-redesign** branch in github instead of master (see more in the [FAQ](./faq.md)
 
 After your changes are done get the latest Shopify changes again
 ```
