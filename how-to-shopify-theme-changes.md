@@ -79,4 +79,4 @@ Remember when pushing to the live theme -- do not push to the live template unti
   - Links should **NOT** include your development store preview theme id (`preview_theme_id`) (unless you're making homepage edits)
 - WHY?
   - Eric / Fiona / Client / Others make edits to your templates from the customizer.
-  - We want you to get the latest changes from production before pushing any code, and know if they make changes to your development store id or to another unpublished theme. We also realize that tracking/pulling in all those changes becomes complicated if the changes are done to multiple themes. Always pushing/pulling your code to developement templates on the live theme helps reduce the amount of places other people could make changes to that you need to merge.
+  - We want to use a single theme with templates for all changes to the site, coupled with good dev practices of pulling from the trunk theme before pushing any code. The goal of this process is to mediate overriding changes via the code editor.
