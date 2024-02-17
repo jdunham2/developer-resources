@@ -19,13 +19,13 @@ brew upgrade shopify-cli
 ```
 // SYNC Github with latest Shopify changes:
 
-// Pull any changes from GitHub Master
+// Pull any changes from GitHub Trunk Branch
 git pull
 
 // Pull any changes from Shopify
 stpl
 
-// Push Shopify production changes to GitHub Master
+// Push Shopify production changes to GitHub Trunk Branch
 git add .
 git commit -m 'production download'
 ```
@@ -35,10 +35,10 @@ git commit -m 'production download'
 Make your code changes in Shopify CLI Development Environment
 `std`
 
-Work off the trunk theme in git
-- live themes are always `master`
-- new site builds that will replace an old site are always on a `new theme` branch
-  - verify the new theme branch name with `git branch`
+Work off the "trunk" branch/theme
+- Live Shopify themes are always on the `master` branch.
+- New site builds that will replace an old site have their own development theme in Shopify (**MM Development Redesign**)
+  - Use **mm-redesign** branch in github instead of master (see more in the FAQ)
 
 After your changes are done get the latest Shopify changes again
 ```
@@ -68,4 +68,3 @@ git add .
 git commit -m 'type(scope): description' -m '2nd description for body of commit'
 git push
 ```
-
