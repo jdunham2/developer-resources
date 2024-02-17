@@ -68,3 +68,14 @@ git add .
 git commit -m 'type(scope): description' -m '2nd description for body of commit'
 git push
 ```
+
+## Process
+Remember when pushing to the live theme -- do not push to the live template until it has been approved.
+- **Create a new PLP/PDP/Article/etc template for redesigns.**
+  - Once they have been QA'd and approved, merge the new template with the live one.
+- Code should be pushed to the trunk theme before asking for QA.
+  - Links to pages to be QA'd should include the template parameter (`view=template-name`)
+  - Links should **NOT** include your development store preview theme id (`preview_theme_id`) (unless you're making homepage edits)
+- WHY?
+  - Eric / Fiona / Client / Others make edits to your templates from the customizer.
+  - We want you to get the latest changes from production before pushing any code, and know if they make changes to your development store id or to another unpublished theme. We also realize that tracking/pulling in all those changes becomes complicated if the changes are done to multiple themes. Always pushing/pulling your code to developement templates on the live theme helps reduce the amount of places other people could make changes to that you need to merge.
