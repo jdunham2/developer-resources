@@ -12,12 +12,18 @@ function std() {
   current_store=$(echo $current_store | tr '[:lower:]' '[:upper:]')
 
   echo "  Work on $current_store? (Y/n)"
-
   read answer
-  echo
-  if [[ $answer != ^[Nn]$ ]]
+
+  if [[ $answer != "n" && $answer != "N" ]]
   then
-    shopify theme dev --poll --theme-editor-sync --open
+    echo " Sync customizer changes? (Y/n)"
+    read syncAnswer
+    if [[ $syncAnswer != "n" && $syncAnswer != "N" ]]
+    then
+      shopify theme dev --poll --theme-editor-sync --open
+    else
+      shopify theme dev --poll --open
+    fi
   fi
 }
 
