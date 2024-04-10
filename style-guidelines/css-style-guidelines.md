@@ -15,10 +15,18 @@ All custom CSS should be added using one of the following options:
 ## !important
 !important is the last resort that is generally used only when you need to override something and there is no other way to do it. Using !important is a bad practice and you should avoid it wherever possible.
 
-> [!WARNING]  
 > Bad Example
 ```css example-bad
-.bad-code {
+.component-code {
   font-size: 4rem !important;
+}
+```
+
+Instead we use more specific css specifiers to target the element we want
+
+> Good Example
+```css example-bad
+.grand-parent .parent .component-code {
+  font-size: 4rem;
 }
 ```
