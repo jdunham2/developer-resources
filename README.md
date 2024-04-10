@@ -14,6 +14,7 @@ https://code.visualstudio.com/Download
 - Auto Complete Tag - Jun Han
 - Auto Close Tag - Jun Han
 - Git Graph - mhutchie
+- Prettier - Code formatter
 
 // optional theme: One Monokai Theme - Joshua Azemoh
 
