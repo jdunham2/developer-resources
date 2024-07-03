@@ -14,31 +14,9 @@ git config --global user.email "your_email@domain.com"
 - Ensure running latest version of CLI
 brew upgrade shopify-cli 
 
-
-## PreSteps (before you make any changes to code): 
-```
-// SYNC Github with latest Shopify changes:
-
-// Pull any changes from GitHub Trunk Branch
-git pull
-
-// Pull any changes from Shopify
-stpl
-
-// Push Shopify production changes to GitHub Trunk Branch
-git add .
-git commit -m 'production download'
-```
-
-
 ## Development
 Make your code changes in Shopify CLI Development Environment
 `std`
-
-Work off the "trunk" branch/theme
-- Live Shopify themes are always on the `master` branch.
-- New site builds that will replace an old site have their own development theme in Shopify (**BRAND [DEV] MM Development Redesign**)
-  - Use **mm-redesign** branch in github instead of master (see more in the [FAQ](./faq.md)
 
 After your changes are done get the latest Shopify changes again
 ```
@@ -46,39 +24,43 @@ After your changes are done get the latest Shopify changes again
 git add .
 git stash
 // get the latest changes to production
-stpl
-git status
-// if changes run
-git add .
-git commit -m 'production download'
+git pull
 // get your changes back
 git stash pop
 
-// IMPORTANT - REVIEW every code change in the source control
+// IMPORTANT - CHECK YOUR CODE AGAIN!
+// REVIEW every code change you've done change by change, NOT file by file
+// DO NOT SIMPLY push your code.
+// - [ ] Did you remove all code smells like unused commented out code, or console.logs for debugging?
+// - [ ] Does your code follow company styleguides?
+     - https://github.com/jdunham2/developer-resources/blob/main/style-guidelines/css-style-guidelines.md
+     - https://github.com/jdunham2/developer-resources/blob/main/style-guidelines/javascript-style-guidleines.md
 
-// push your changes to the trunk theme
-stph
-
-// IMPORTANT - TEST your changes on the trunk theme
-// fix anything if its broken once on trunk theme right away
-
-// push your changes to git
+// push your changes to git (see which branch to push to below)
 git add .
 // use conventional commit messages
 git commit -m 'type(scope): description' -m '2nd description for body of commit'
 git push
+
+// IMPORTANT - TEST your changes on staging / master
+// fix anything if its broken right away
 ```
 
-## Process
-Remember when pushing to the live theme -- do not push to the live template until it has been approved, it should be pushed to a new template that is merged after approval. See steps below.
+## Which branch do I push my code to?
+### Before Approval
+Push to staging (or mm-redesign if we are redoing the site entirely).
 
-Overview: We want to use a single theme with templates for all changes to the site, coupled with good dev practices of pulling from the trunk theme before pushing any code. The goal of this process is to mediate overriding changes via the code editor.
+### After Approval
+Push to master (NOT needed for mm-redesign if we are redoing the site entirely).
+
+- Live Shopify themes are always on the `master` branch.
+- Staging themes are always on the `staging` branch
+- New site builds that will replace an old site have their own development theme in Shopify (**BRAND [DEV] MM Development Redesign**)
+  - Use **mm-redesign** branch in github instead of master (see more in the [FAQ](./faq.md)
+
+## Which files should I overwrite on LIVE?
+Remember, do not push to the live template until it has been approved. If you have to push something to live for approval, create a new temporary template on the live store and after approval override the template from live with the approved design. See steps below.
 
 - **Create a new PLP/PDP/Article/etc template for redesigns.**
   - Once they have been QA'd and approved, merge the new template with the live one.
-- Code should be pushed to the trunk theme before asking for QA.
-  - Links to pages to be QA'd should include the template parameter (`view=template-name`)
-  - Links should **NOT** include your development store preview theme id (`preview_theme_id`) (unless you're making homepage edits)
-- WHY?
-  - Eric / Fiona / Client / Others make edits to your templates from the customizer.
-  - We want to use a single theme with templates for all changes to the site, coupled with good dev practices of pulling from the trunk theme before pushing any code. The goal of this process is to mediate overriding changes via the code editor.
+- Code should be pushed to the staging theme before asking for QA.
