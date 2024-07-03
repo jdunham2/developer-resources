@@ -1,9 +1,11 @@
 # Developer Resources
 
-**Install Shopify CLI**
+## Developer Computer Setup
+
+### Install Shopify CLI
 https://shopify.dev/docs/themes/tools/cli/install
 
-**Install VSCode**
+### Install VSCode
 https://code.visualstudio.com/Download
 
 **Install VSCode extensions**
@@ -18,24 +20,21 @@ https://code.visualstudio.com/Download
 
 // optional theme: One Monokai Theme - Joshua Azemoh
 
-**Install Brew**
+### Install Brew
 https://brew.sh/
 
-**Install Zsh + PowerLevel10k**
+### Install Zsh + PowerLevel10k
 https://dev.to/abdfnx/oh-my-zsh-powerlevel10k-cool-terminal-1no0
 
-**Add ShopifyCLI aliases**
+### Add ZSHRC Aliases for our ShopifyCLI commands
 - Add [code from this file](https://github.com/jdunham2/developer-resources/blob/main/shopify-cli-aliases.bash) to bottom of ~/.zshrc
 
+| Alias | Shopify cli equivilent | Description |
+| ---| ---| --- |
+| stpl | shopify theme pull --store... | pulls from shopify setting the store automatically based on your folder structure |
+| std | shopify theme dev --sync-editor ... | opens dev store with preset options best for our DX |
+| stph | shopify theme push --store... | pushes to shopify with preset options based on your folder structure |
+
+
 ### How-Tos
-**Using ShopifyCLI aliases**
-Depends on store folder named using structure: [store-name]-shopify
-- Pull themes
-  - stpl
-- Run development environment
-  - std
-- Push themes
-  - stph
-- Save to git repo (see if need help with this)
-  - Use Conventional Commit message https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages#conventional-commits
-- [Steps to make theme code changes](https://github.com/jdunham2/developer-resources/blob/main/how-to-shopify-theme-changes.md)
+- [Developer Code Process](https://github.com/jdunham2/developer-resources/blob/main/how-to-shopify-theme-changes.md)
