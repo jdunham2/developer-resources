@@ -23,7 +23,7 @@ After your changes are done get the latest Shopify changes again
 // stash your changes
 git add .
 git stash
-// get the latest changes to production
+// get the latest changes from github origin
 git pull
 // get your changes back
 git stash pop
@@ -36,13 +36,24 @@ git stash pop
      - https://github.com/jdunham2/developer-resources/blob/main/style-guidelines/css-style-guidelines.md
      - https://github.com/jdunham2/developer-resources/blob/main/style-guidelines/javascript-style-guidleines.md
 
+// Committing Code
 // push your changes to git (see which branch to push to below)
 git add .
 // use conventional commit messages
 git commit -m 'type(scope): description' -m '2nd description for body of commit'
 git push
 
-// IMPORTANT - TEST your changes on staging / master
+// THIS IS TO FIX A BUG WITH SHOPIFY
+// ------------------------------------------------
+// pull the code from shopify to see if something didn't sync correctly with github
+stpl -l // on mac
+shopify theme pull // on windows
+// if there are differences where Shopify deleted json that was added by you, repush to the same theme with the following command
+stph // on mac
+shoipfy theme push
+// ------------------------------------------------
+
+// IMPORTANT - TEST your changes on the theme you pushed to in Shopify
 // fix anything if its broken right away
 ```
 
