@@ -46,7 +46,7 @@ git push
 // THIS IS TO FIX A BUG WITH SHOPIFY
 // ------------------------------------------------
 // pull the code from shopify to see if something didn't sync correctly with github
-stpl -l // on mac
+stpl // on mac
 shopify theme pull // on windows
 // if there are differences where Shopify deleted json that was added by you, repush to the same theme with the following command
 stph // on mac
